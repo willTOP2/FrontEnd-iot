@@ -1,0 +1,45 @@
+  <div id="area-input">
+  
+    <input id="pesquisa-input" matInput type="text" 
+    [(ngModel)]="value" (input)="search($event)"  placeholder="Pesquisar">
+        
+  
+  </div>
+  <div class="main">
+  <mat-card>
+  <table class="table " >
+    
+    <thead >
+     <tr class="header">
+       <th >Nome </th>
+       <th >Condição </th>
+       <th (click)="sort('temp')">Temperatura  <mat-icon>filter_list</mat-icon></th>
+     </tr>
+    </thead><br>
+
+    <tbody class="body">
+     <tr *ngFor="let product of getAllTemp | orderBy: orderHeader: isDescOrder" >  
+      <ng-container *ngIf="product.condicao == 'Verificar'">
+     
+      <ng-container>
+      <td>{{product.nome}}</td>
+     </ng-container>
+
+     <ng-container>
+       <td>{{product.condicao}}</td>
+      </ng-container>
+
+      <ng-container>
+       <td>{{product.temp}}</td>      
+      </ng-container>
+      
+      </ng-container>
+      
+    </tbody>
+ </table>
+</mat-card>
+</div>
+  <h1>
+
+  </h1>
+  

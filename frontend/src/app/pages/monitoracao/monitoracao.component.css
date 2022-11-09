@@ -1,0 +1,93 @@
+
+#area-input{
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+}
+
+#pesquisa-input{
+    width: 30%;
+    border-radius: 20px;
+    border: 1px solid;
+    height: 40px;
+    padding-left: 10px;
+    background-color: #ebebe0;
+}
+
+@media screen and (max-width: 450px) {
+    #pesquisa-input {
+        width: 60%;
+    }
+  }
+
+#conj-card{
+    margin: 10px;
+    display: inline-flex;
+    
+}
+
+.setor-card{
+    width: 200px;
+    height: 200px;
+    text-align: center;    
+    margin: 20px;
+    background-color: #000;
+   
+}
+
+mat-card-title, mat-card-subtitle{
+    color: #fff;
+    margin: 0;    
+    border-bottom: 2px solid #fff;    
+    margin-bottom: 10px;
+}
+
+mat-card-subtitle{    
+    border-bottom: solid #fff;
+}
+
+
+
+/*min-height: 10em;
+display: table-cell;
+vertical-align: middle;*/
+
+@media screen and (max-width: 480px){
+    #conj-card{
+        margin: 10px;
+        display: grid;
+        justify-content: center;
+        
+    }
+    mat-card-content .teste{
+        font-size: 45px;
+    }
+}
+    .setor-card{
+        width: 180px;
+        height: 170px;
+        border-radius: 20px;
+    }
+   
+
+     mat-card-content .teste{
+        font-size: 45px;
+    }
+
+    mat-card-title, mat-card-content .h3{
+        font-size: 20px;
+    }
+
+    mat-card-content{
+        margin-top: 20px;
+    }
+    
+    mat-card-subtitle, mat-card-content h3{
+        font-size: 14px;    
+    }
+
+.mon{
+    margin-left: 40px;
+    text-shadow: 2px 4px 5px rgb(216, 13, 155);
+    font-size: 20px;
+}

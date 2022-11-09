@@ -1,0 +1,48 @@
+<div class="logo-tcs">
+<img src="../../../assets/img/Tata_Consultancy_Services_Logo.svg.png" alt="logo-tcs" class="img">
+</div>
+
+
+<mat-card>
+<div class="boas">
+    <h1>
+        You're welcome!
+    </h1>
+</div>
+
+
+<div class="log">
+<div id="area-input">
+
+    <input [(ngModel)]="usuario.nome" id="usuario" type="text" class="validate" placeholder="Usuario" id="pesquisa-input">
+    <button *ngIf="id" matSuffix mat-icon-button aria-label="Clear"  >
+        <i class="material-icons">
+            close
+        </i>
+    </button>
+
+</div>
+
+
+
+<div id="area-input">
+
+    <input [(ngModel)]="usuario.senha"  id="senha" type="password" class="validate" placeholder="Senha" id="pesquisa-input">
+    <button *ngIf="senha" matSuffix mat-icon-button aria-label="Clear">
+        <i class="material-icons">
+            close
+        </i>
+    </button>
+</div>
+
+<div id="area-log">    
+    <button id="area-login" mat-raised-button color="primary" (click)="fazerLogout()">Logout</button>    
+    <button id="area-login" mat-raised-button color="primary" (click)="fazerLogin()">Confirm</button>    
+    
+</div>
+</div>
+</mat-card>
+
+
+
+

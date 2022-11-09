@@ -1,0 +1,64 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+table {
+  width: 100%;
+  
+  
+}
+
+mat-card{
+  border-radius: 20px;
+  background-color: #5e595949;  
+  width: 1400px;
+
+  
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#area-input{
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+  }
+  
+  #pesquisa-input{
+    width: 30%;
+    border-radius: 20px;
+    border: 1px solid;
+    height: 40px;
+    padding-left: 10px;
+    
+  }
+  
+
+  .header{
+    font-size: 16px;
+    background-color: white;
+    
+  }
+  
+  
+  .body{
+    font-size: 15px;    
+    
+  }
+
+  @media screen and (max-width: 450px) {
+    #pesquisa-input {
+        width: 60%;
+    }
+    .header{
+      font-size: 15px;
+    }
+    
+    .body{
+      font-size: 14px;   
+    }
+  }
+  

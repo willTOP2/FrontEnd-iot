@@ -1,0 +1,22 @@
+.footer{
+    position: fixed;
+    bottom: 0;    
+    display: flex;
+    justify-content: flex-end;
+    background: var(--bkg-color);
+    color: var(--text-color);
+  
+}
+
+.footer > span{
+    font-size: 1.3rem;
+    font-weight:300 ; 
+    
+}
+.blue{
+    color: rgb(61, 127, 240);
+   
+}
+.material-icons{
+    color: rgb(235, 69, 124);
+}

@@ -1,0 +1,79 @@
+
+
+#area-input{    
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+}
+
+
+#pesquisa-input{
+    width: 20%;
+    border-radius: 10px;
+    border: 1px solid;    
+    height: 40px;
+    padding-left: 10px;
+    background-color: #ebebe0;
+    justify-content: center;
+    
+}
+
+
+@media screen and (max-width: 450px) {
+    #pesquisa-input {
+        width: 40%;        
+    }  
+    
+   
+  }
+
+#area-login{    
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+}
+#mensagem{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    
+}
+
+#area-log{
+    display: flex;
+    justify-content: center;    
+
+}
+
+.log{
+    margin-top: 40px;
+       
+}
+h1{
+    font-size: 40px;
+
+}
+.boas{
+    margin-top: 30px;
+    text-align: center;
+    
+}
+.img{   
+    margin-top: 1px;
+    width: 40%;    
+}
+.logo-tcs{
+    text-align: center;    
+   
+}
+mat-card{
+    margin-top: 5px;
+    background-color: palevioletred;
+    text-align: center;   
+    
+    
+}
+

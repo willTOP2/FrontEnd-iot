@@ -1,0 +1,14 @@
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.blue{
+    color:rgb(66, 66, 246);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+} 

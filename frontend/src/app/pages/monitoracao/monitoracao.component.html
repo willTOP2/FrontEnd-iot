@@ -1,0 +1,75 @@
+
+<div id="area-input">
+
+    <input id="pesquisa-input" matInput type="text" 
+    [(ngModel)]="value" (input)="search($event)" placeholder="Pesquisar">
+      
+</div>
+
+<div class="mon">
+  <b>MONITORAÇÃO</b>
+</div>
+
+<ng-template  ngFor let-temp [ngForOf]="getAllTemp | orderBy: 'condicao' : true" >
+<div id="conj-card" *ngIf="temp.temp >= 30 && temp.hora < 180">  
+
+  <mat-card   class="setor-card"> 
+
+      <mat-card-title><h1><b>{{temp.nome}}</b></h1></mat-card-title>     
+      <mat-card-content style="color: #ff0000">
+          <h1 class="teste"><b>{{temp.temp}}º <a routerLink="historico/{{temp.id}}"><mat-icon style="color: white">search</mat-icon></a> </b></h1>
+          <h4 class="h3"><b>{{temp.hora}} - </b> <b>{{temp.condicao}} </b></h4>
+      </mat-card-content>
+   
+  </mat-card>
+ 
+  </div>
+
+  <div id="conj-card" *ngIf="temp.temp <= 15 && temp.hora < 180">  
+
+    <mat-card   class="setor-card"> 
+  
+        <mat-card-title><h1><b>{{temp.nome}}</b></h1></mat-card-title>
+        
+        <mat-card-content style="color: #00ffff">
+            <h1 class="teste"><b>{{temp.temp}}º <a routerLink="historico/{{temp.id}}"><mat-icon style="color: white">search</mat-icon></a></b></h1>
+            <h4 class="h3"><b>{{temp.hora}} - </b> <b>{{temp.condicao}} </b></h4>
+        </mat-card-content>
+    </mat-card>
+   
+    </div>
+
+    <div id="conj-card" *ngIf="temp.temp > 15 && temp.temp < 30 && temp.hora < 180">  
+
+      <mat-card   class="setor-card"> 
+    
+          <mat-card-title><h1><b>{{temp.nome}}</b></h1></mat-card-title>
+          
+          <mat-card-content style="color: #01ff09">
+              <h1 class="teste"><b>{{temp.temp}}º <a routerLink="historico/{{temp.id}}"><mat-icon style="color: white">search</mat-icon></a> </b></h1>
+              <h4 class="h3"><b>{{temp.hora}} - </b> <b>{{temp.condicao}} </b></h4>
+          </mat-card-content>
+      </mat-card>
+     
+      </div>
+
+      <div id="conj-card" *ngIf="temp.hora > 180"  >  
+    
+        <mat-card class="setor-card"> 
+
+         
+            <mat-card-title><h1><b>{{temp.nome}}</b></h1></mat-card-title>
+            
+            <mat-card-content style="color: #ff9900">
+              <h1 class="teste"> <b>{{temp.temp}}º <a routerLink="historico/{{temp.id}}"><mat-icon style="color: white">search</mat-icon></a></b></h1>
+              <h4 class="h3"><b>{{temp.hora}} - </b> <b>{{temp.condicao}} </b></h4>
+             
+            </mat-card-content>
+        </mat-card>
+       
+        </div>
+</ng-template>
+
+<h1>
+      
+</h1>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "import-sort": "^6.0.0",
+    "sort-by": "^1.2.0"
+  }
+}
