@@ -15,6 +15,10 @@ export class NotificacaoComponent implements OnInit {
   isDescOrder: boolean = true;
 
   public value:string = ""   
+
+
+  
+  public nomeTitle:string = "Notifications"
   
   public getAllTemp : any;  
   public setAllTemp :any;

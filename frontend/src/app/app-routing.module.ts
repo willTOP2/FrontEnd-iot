@@ -18,18 +18,18 @@ const routes: Routes = [{
 },{
   path:"notificacao",
   component: NotificacaoComponent,
-  canActivate: [AuthGuard],
-  canLoad: [AuthGuard]
+  //canActivate: [AuthGuard],
+  //canLoad: [AuthGuard]
 },{
   path:"",  
   component:MonitoracaoComponent,
-  canActivate: [AuthGuard],
-  canLoad: [AuthGuard]
+  //canActivate: [AuthGuard],
+  //canLoad: [AuthGuard]
 },{
   path:"historico/:id",
   component: HistoricoComponent, 
-  canActivate: [AuthGuard],
-  canLoad: [AuthGuard]
+  //canActivate: [AuthGuard],
+  //canLoad: [AuthGuard]
 }];
 
 @NgModule({

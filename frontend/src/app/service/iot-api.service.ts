@@ -9,7 +9,7 @@ import { catchError, EMPTY, map, Observable, tap } from 'rxjs';
 })
 export class IotApiService { 
 
-  private url:string = 'http://localhost:3000/'
+  private url:string = 'https://26fuifhi25.execute-api.us-east-1.amazonaws.com'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {
  
@@ -19,10 +19,14 @@ export class IotApiService {
    public result:any
 
  public apiAll(): Observable<any>{
-  return  this.http.get<any>(`${this.url}results`)
+
+  var test = this.http.get<any>(`${this.url}/test/A01%27`) 
+  console.log(test)
+  return test
       .pipe(
        res => res,
-  ) }
+  ) 
+}
 
   public readByid (id: number): Observable<any>{
     const url = `${this.url}results/${id}`;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 import { LoginComponent } from '../../../pages/login/login.component';
 
@@ -10,13 +10,17 @@ import { LoginComponent } from '../../../pages/login/login.component';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-    
+ 
+
+
+  @Input()  public title: string = "Temperature Monitoring"
+  
 
   constructor() { 
    
     
   }
-
+  
   ngOnInit(): void {
   }
 

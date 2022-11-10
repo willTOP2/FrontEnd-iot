@@ -1,11 +1,22 @@
 header {
     background-color: #000000;
-    padding: 20px 20px 0 20px;
+    padding: 1px 20px 0 20px;
 }
+
+h1{
+    color: #fff; 
+    align-items: center; 
+    justify-content: center;
+    display: flex;  
+    text-align: center;
+    font-family: 'JetBrains Mono'; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 
 header img{
     width: 15%;
-    margin-left: 20px;
+    margin-left: 1px; 
 }
 
 #menu ul{

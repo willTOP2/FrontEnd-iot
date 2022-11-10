@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IotApiService } from 'src/app/service/iot-api.service';
 import { Product } from '../product.model';
@@ -14,6 +14,7 @@ export class HistoricoComponent implements OnInit {
 
   public getAllTempo : any
   
+   public nomeTitle: string = "Historic of Local"
   public setAllTemp :any 
 
   constructor(private iotService: IotApiService,private router: Router,

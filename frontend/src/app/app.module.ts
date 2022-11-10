@@ -22,6 +22,8 @@ import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from  '@angular/forms';
+import { ReactiveFormsModule } from  '@angular/forms';
+
 import { MatFormFieldModule }  from '@angular/material/form-field';
 import { MatInputModule }  from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
@@ -38,6 +40,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { OrderModule } from 'ngx-order-pipe';
 import { LocalDateTimePipe } from './pipe/local-date-time.pipe';
 import { HistoricoComponent } from './pages/historico/historico.component';
+import { InputComponent } from './shared/input/input.component';
 
 
 
@@ -49,13 +52,15 @@ import { HistoricoComponent } from './pages/historico/historico.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,    
+
     LoginComponent, 
     MonitoracaoComponent, 
-    NotificacaoComponent, LocalDateTimePipe, HistoricoComponent, 
-    
+    NotificacaoComponent, LocalDateTimePipe, HistoricoComponent, InputComponent, 
+ 
     
   ],
-  imports: [
+  imports: [ 
+ 
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
@@ -64,7 +69,8 @@ import { HistoricoComponent } from './pages/historico/historico.component';
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule, 
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
@@ -78,7 +84,8 @@ import { HistoricoComponent } from './pages/historico/historico.component';
     }),
     BrowserAnimationsModule,
     MatPaginatorModule,
-    MatSortModule,
+    MatSortModule, 
+  
     OrderModule
     
   ],

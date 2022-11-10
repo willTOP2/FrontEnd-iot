@@ -37,8 +37,9 @@ export class MonitoracaoComponent implements OnInit {
      this.setAllTemp = res; 
      this.getAllTemp = this.setAllTemp
     }
+    
       
-    );
+    );console.log(this.getAllTemp)
  }
 
 
