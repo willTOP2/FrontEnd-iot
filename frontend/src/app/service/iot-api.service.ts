@@ -9,7 +9,7 @@ import { catchError, EMPTY, map, Observable, tap } from 'rxjs';
 })
 export class IotApiService { 
 
-  private url:string = 'https://26fuifhi25.execute-api.us-east-1.amazonaws.com'
+  public urls:string = 'https://26fuifhi25.execute-api.us-east-1.amazonaws.com/test/teste?id'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {
  
@@ -18,19 +18,62 @@ export class IotApiService {
 
    public result:any
 
- public apiAll(): Observable<any>{
+  
 
-  var test = this.http.get<any>(`${this.url}/test/A01%27`) 
-  console.log(test)
-  return test
-      .pipe(
-       res => res,
-  ) 
+ public apiAll(): Observable<any>{
+  
+  return this.http.get<any>(`${this.urls}=${'A02'}`) 
+    .pipe( 
+        tap(res => res) ,
+        tap(res => {
+           res.Items.map( (resTemp: any) =>{
+             this.http.get<any>(resTemp.urls).pipe(
+              map(
+              res=> res
+              )
+             ).subscribe( res => resTemp = res)
+           })
+           
+           } )
+          
+    )
 }
 
-  public readByid (id: number): Observable<any>{
-    const url = `${this.url}results/${id}`;
-    return this.http.get<any>(url).pipe(map((res) => res))
+
+
+
+
+   public apiGetIDTemp(url: string) : Observable<any> {
+    
+     return this.http.get<any>(url).pipe(
+      map(
+        res=> res
+      )
+     )
+   }
+
+   
+
+
+
+
+  public readByid (id: string): Observable<any>{ 
+    return this.http.get<any>(`${this.urls}=${id}`)
+     .pipe( 
+
+      tap(res => {
+         res.Items.map( (resTemp: any) =>{
+           this.http.get<any>(resTemp.urls).pipe(
+            map(
+            res=> res
+            )
+           ).subscribe( res => resTemp = res)
+         })
+         
+         } )
+        
+  )
+   
   }
 
 

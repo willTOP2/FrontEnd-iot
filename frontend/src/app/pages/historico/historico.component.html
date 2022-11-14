@@ -1,33 +1,29 @@
 <app-header  [title]="nomeTitle"    ></app-header> 
   <mat-card>
  
-   
+
     <table class="table " >
+     
         <thead >
+    
          <tr class="header">
-           <th >id </th>
-           <th >nome </th>
+      
+           <th >Hora </th>
         
            <th >Temperatura  <mat-icon>filter_list</mat-icon></th>
          </tr>
-        </thead><br>
+        </thead><br> 
+     
     <tbody class="body">
+      <ng-template ngFor let-temp [ngForOf]="getAllTempo | orderBy: 'condicao' : true" >
      <tr >  
+ 
+  
+      <td>{{temp.hora.S}}</td>
+      <td>{{temp.temperatura.S}}º</td>
+      </ng-template>
 
      
-      <ng-container>
-      <td>{{getAllTempo.id}}</td>
-     </ng-container>
-
-     <ng-container>
-       <td>{{getAllTempo.nome}}</td>
-      </ng-container>
-
-      <ng-container>
-       <td>{{getAllTempo.temp}}</td>      
-      </ng-container>
-      
-
       
     </tbody>
  </table>

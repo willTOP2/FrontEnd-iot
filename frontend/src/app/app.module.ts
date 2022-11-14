@@ -60,7 +60,7 @@ import { InputComponent } from './shared/input/input.component';
     
   ],
   imports: [ 
- 
+    
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
@@ -85,7 +85,7 @@ import { InputComponent } from './shared/input/input.component';
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatSortModule, 
-  
+   
     OrderModule
     
   ],

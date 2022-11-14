@@ -17,12 +17,14 @@ const routes: Routes = [{
   component: LoginComponent   
 },{
   path:"notificacao",
-  component: NotificacaoComponent,
+  component: NotificacaoComponent, 
+  title:'notificacao'
   //canActivate: [AuthGuard],
   //canLoad: [AuthGuard]
 },{
   path:"",  
-  component:MonitoracaoComponent,
+  component:MonitoracaoComponent, 
+  title:'Sistema Monitoramento'
   //canActivate: [AuthGuard],
   //canLoad: [AuthGuard]
 },{
